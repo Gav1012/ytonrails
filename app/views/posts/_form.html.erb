@@ -30,7 +30,7 @@
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
-
+  <%= form.hidden_field :user_id, value: current_user.id %>
   <div>
     <%= form.submit %>
   </div>
