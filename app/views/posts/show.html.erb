@@ -22,6 +22,10 @@
       <p class="text-1xl post-details">
         <%= @post.description %>
       </p>
+    <%= link_to 'Edit', edit_post_path(@post), class: "mt-2
+    rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Delete', post_path(@post), method: :delete, class: "mt-2
+    rounded-lg py-3 px-5 bg-gray-100 font-medium %>
   <% else %>
     <% if @post.image.attached? %>
       <%= image_tag(@post.image, class: "thumbnail") %>
